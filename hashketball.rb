@@ -62,7 +62,7 @@ def game_hash
       ]
     },
     :away =>{
-      :team_name => "Charlottw Hornets"
+      :team_name => "Charlotte Hornets"
       :colors => ["Turquoise, Purple"]
       :players => [
           {
@@ -125,6 +125,16 @@ def game_hash
   }
 end
 
+
+def team_colors(team)
+    if game_hash[:home][:team_name] == team
+        return game_hash[:home][:colors]
+    elsif game_hash[:away][:team_name] == team 
+        return game_hash[:away][:colors]
+    else
+        return nil
+    end
+end
 
 
 
